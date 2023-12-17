@@ -83,4 +83,4 @@ This YouTube Clone project not only mimics the visual aspects of YouTube but als
 
 **Crafted with ❤️ by [Dishant Sahu]**
 
-[![Follow on GitHub](https://img.shields.io/github/followers/your-username?label=Follow&style=social)]([https://github.com/your-username](https://github.com/dishant-08)https://github.com/dishant-08)
+[![Follow on GitHub](https://img.shields.io/github/followers/your-username?label=Follow&style=social)]([(https://github.com/dishant-08)]
