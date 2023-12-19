@@ -22,10 +22,11 @@ const Head = () => {
     // console.log("api call", searchRes);
     const res = await fetch(SEARCH_SUGGESTION + searchRes);
     const data = await res.json();
-    // setVideo(data.items);
-    SetSearchData(data[1]);
+    // setVideo(data);
+    // console.log(data?.data[1]);
+    SetSearchData(data?.data[1]);
     dispatch(addSearchItem(searchRes));
-    dispatch(SearchKeeper({ [searchRes]: data[1] }));
+    dispatch(SearchKeeper({ [searchRes]: data?.data[1] }));
 
     console.log(searchApi);
     // console.log(addSearchItem);

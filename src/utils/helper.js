@@ -10,26 +10,31 @@ export function convertToHumanReadable(labelValue) {
     ? (Math.abs(Number(labelValue)) / 1.0e3).toFixed(2) + "K"
     : Math.abs(Number(labelValue));
 }
-
 export function convertDurationToTimestamp(duration) {
-  // Extract the minutes and seconds from the duration string
-  const match = duration.match(/PT(\d+M)?(\d+S)?/);
+  // Extract the hours, minutes, and seconds from the duration string
+  const match = duration.match(/PT(\d+H)?(\d+M)?(\d+S)?/);
 
   if (!match) {
     // Invalid duration format
     return "Invalid Duration";
   }
 
-  const minutes = match[1] ? parseInt(match[1], 10) : 0;
-  const seconds = match[2] ? parseInt(match[2], 10) : 0;
+  const hours = match[1] ? parseInt(match[1], 10) : 0;
+  const minutes = match[2] ? parseInt(match[2], 10) : 0;
+  const seconds = match[3] ? parseInt(match[3], 10) : 0;
 
   // Format the timestamp
-  const formattedTimestamp = `${String(minutes).padStart(2, "0")}:${String(
-    seconds
-  ).padStart(2, "0")}`;
+  const formattedTimestamp = `${String(hours).padStart(2, "0")}:${String(
+    minutes
+  ).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`;
 
   return formattedTimestamp;
 }
+
+// // Example usage:
+// const duration = "PT5H14M1S";
+// console.log(convertDurationToTimestamp(duration));
+
 export function convertToInternationalCurrencySystem(labelValue) {
   // Nine Zeroes for Billions
   return Math.abs(Number(labelValue)) >= 1.0e9
