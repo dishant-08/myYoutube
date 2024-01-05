@@ -9,6 +9,7 @@ import { SEARCH_SUGGESTION } from "../utils/constants";
 import { SearchKeeper } from "../utils/SearchSlice";
 import { useNavigate } from "react-router-dom";
 import { addSearchItem } from "../utils/SearchSugg";
+import { Link } from "react-router-dom";
 
 const Head = () => {
   const dispatch = useDispatch();
@@ -55,13 +56,19 @@ const Head = () => {
         <img
           src={MenuLogo}
           onClick={() => toggleMenu()}
-          className="w-8 h-8 p-1 m-2 mx-4  cursor-pointer "
+          className="w-8 h-8 p-1 m-2 md:mx-4  cursor-pointer "
           alt="Menu"
         />
-        <img src={YoutubeLogo} className=" w-32 h-12 px-4 " alt="YoutubeLogo" />
+        <Link to="/">
+          <img
+            src={YoutubeLogo}
+            className=" w-32 h-12 md:px-4 "
+            alt="YoutubeLogo"
+          />
+        </Link>
       </div>
 
-      <div className="col-span-11   flex flex-col ">
+      <div className="col-span-11 mx-2  flex flex-col ">
         <div className="flex mt-2   ">
           <input
             type="search"
