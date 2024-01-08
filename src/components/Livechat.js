@@ -3,6 +3,11 @@ import UserLogo from "../assets/user-128.svg";
 import ChatMessage from "./ChatMessage";
 import { useDispatch, useSelector } from "react-redux";
 import { addMessage } from "../utils/chatSlice";
+import {
+  generateRandomCompliment,
+  generateRandomId,
+  generateRandomName,
+} from "../utils/helper";
 
 const Livechat = () => {
   const dispatch = useDispatch();
@@ -15,8 +20,8 @@ const Livechat = () => {
       //   console.log("store called");
       dispatch(
         addMessage({
-          name: "Disht pattnaik",
-          message: " u r always op 1 ",
+          name: generateRandomName(),
+          message: generateRandomCompliment(),
         })
       );
     }, 1500);
