@@ -1,4 +1,4 @@
-export const YOUTUBE_DATA = `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&regionCode=IN&maxResults=50&key=${process.env.REACT_APP_GOOGLE_API_YOUTUBE_KEY}`;
+export const YOUTUBE_DATA = `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&regionCode=IN&key=${process.env.REACT_APP_GOOGLE_API_YOUTUBE_KEY}&maxResults=`;
 
 export const SEARCH_DATA = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&key=${process.env.REACT_APP_GOOGLE_API_YOUTUBE_KEY}&q=`;
 

@@ -4,11 +4,13 @@ import {
   convertDurationToTimestamp,
   convertToHumanReadable,
 } from "../utils/helper";
+import { useSelector } from "react-redux";
 
 const VideoCard = ({ data }) => {
   //   const { localized, thumbnails, channelTitle } = data.snippet; this is wrong way
   //   const { viewCount } = data.statistics;
   //   console.log(data);
+  const isSidebarOpen = useSelector((store) => store.Sidebar.isSidebarOpen);
   const { snippet, statistics, contentDetails } = data;
   const { localized, thumbnails, channelTitle, publishedAt } = snippet;
   const { viewCount } = statistics;
@@ -17,7 +19,11 @@ const VideoCard = ({ data }) => {
   // const timeStamp = duration.slice(2).replace("M", ":").replace("S", "");
   const timeStamp = convertDurationToTimestamp(duration);
   return (
-    <div className="flex flex-col w-72 m-4  ">
+    <div
+      className={` flex flex-col  m-4 ${
+        isSidebarOpen ? "w-80" : " w-[17rem] "
+      }  `}
+    >
       <div className="relative">
         <img
           className="rounded-xl  "

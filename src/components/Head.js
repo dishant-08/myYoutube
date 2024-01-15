@@ -52,7 +52,7 @@ const Head = () => {
       className="grid grid-flow-col   "
       // onBlur={() => setShowSearchModal(false)}
     >
-      <div className="flex col-span-1 ">
+      <div className="flex col-span-1   ">
         <img
           src={MenuLogo}
           onClick={() => toggleMenu()}
@@ -60,11 +60,13 @@ const Head = () => {
           alt="Menu"
         />
         <Link to="/">
-          <img
-            src={YoutubeLogo}
-            className=" w-32 h-12 md:px-4 "
-            alt="YoutubeLogo"
-          />
+          <div className="flex-shrink-0">
+            <img
+              src={YoutubeLogo}
+              className="w-32 flex-shrink-0 h-12 px-1 hidden sm:block  cursor-pointer "
+              alt="YoutubeLogo"
+            />
+          </div>
         </Link>
       </div>
 
@@ -82,6 +84,10 @@ const Head = () => {
               src={SeacrchLogo}
               className="w-8 h-8 bg-gray-200 p-2 rounded-r-full "
               alt="Search Logo"
+              onClick={() => {
+                navigate(`/search?q=${searchRes}`);
+                setShowSearchModal(false);
+              }}
             />
           </span>
         </div>
