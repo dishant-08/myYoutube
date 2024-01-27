@@ -1,7 +1,16 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router";
 
-export const buttonArray = ["Live", "Music", "Gaming", "Mixes", "GTA"];
+export const buttonArray = [
+  "Live",
+  "Music",
+  "Gaming",
+  "Mixes",
+  "GTA",
+  "Coding ",
+
+  "Geopolitics",
+];
 
 const ButtonList = ({ SeacrhArr = buttonArray }) => {
   const navigate = useNavigate();
@@ -14,7 +23,7 @@ const ButtonList = ({ SeacrhArr = buttonArray }) => {
   // onClick={() => handleBtn(item)}
 
   return (
-    <div className=" mt-4 ml-8 mb-6 w-screen overflow-x-scroll  flex ">
+    <div className=" mt-4 ml-8 mb-6 overflow-x-scroll   flex ">
       <button
         className={` px-3   rounded-xl mx-2 ${
           "All" === selectedBtn
