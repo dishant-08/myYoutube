@@ -7,7 +7,7 @@ import { useSelector } from "react-redux";
 
 const VideoContainer = () => {
   const [video, setVideo] = useState([]);
-  const [Noofvideo, setnoOfVideo] = useState(10);
+  const [Noofvideo, setnoOfVideo] = useState(14);
   // const dispatch = useDispatch();
   // const isSidebarOpen = useSelector((store) => store.Sidebar.isSidebarOpen);
   // console.log( "sidebar " isSidebarOpen);
