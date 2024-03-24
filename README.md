@@ -6,6 +6,11 @@
 
 A full-featured YouTube clone project that goes beyond the basics. Elevate your React skills by exploring advanced features, addressing challenges, and updating the technology stack.
 
+## ScreenShot
+
+![image](https://github.com/dishant-08/myYoutube/assets/60565337/1e0f2a03-7911-4f7e-ad9a-77d627de7ef3)
+
+
 ## ✨ Features
 
 - **Hamburger Menu**
